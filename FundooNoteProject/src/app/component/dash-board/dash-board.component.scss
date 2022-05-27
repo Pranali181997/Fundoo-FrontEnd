@@ -1,0 +1,139 @@
+.example-container {
+  //border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+  }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2; 
+  } 
+  .example-toolbar
+  {
+    //border: 1px solid red;
+    background-color:transparent;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgba(25, 241, 79, 0.12);
+    margin: 0;
+  }
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  // .div_wrraper{
+  //   width: 720px;
+  //   margin-left: 108px;
+
+  // }
+//   .from_wrraper{
+//     background: #f1f3f4;
+//     border: 1px solid transparent;
+//     -webkit-border-radius: 8px;
+//     border-radius: 8px;
+// }
+.wholesearchbox
+{
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  padding-top: 5px;
+  background: #f1f3f4;border: 1px solid transparent; width: 550px;height: 30px;color: #5f6368;margin-left: 80px;
+}
+
+.keepImage
+{
+  height: 39px; padding-left: 20px;
+}
+.inputSearchbox
+{
+  height: 30px;
+    background: none;
+    width: 500px;
+     font-size: large;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+input:focus {
+  outline: none !important;
+}
+.toolbarSetting
+{
+  padding-left: 30px;padding-top: 10px;
+}
+// .toolButtonSetting
+// {
+//   margin-left: 20px;display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+.button
+{
+  border: 0px;background-color: transparent;padding: 20px;
+}
+.nav{
+  margin-left: 300px;
+  
+}
+.icon{
+  block-size: 30px;
+  padding-right: 20px;
+}
+a:hover {
+ border-bottom-right-radius: 20px;
+ border-top-right-radius: 20px;
+ background-color: lightblue !important;
+}
+.sidenav{
+  width: 200px;
+}
+.butt{
+  border: 0px;
+}
+.searc{
+  margin-left: 10px;
+   height: 30px;
+}
+.but1{
+  border: 0px;background-color: white; padding-left: 30px;
+}
+.but2{
+  border: 0px;background-color:transparent; padding-left: 20px;
+}
+.img1{
+  padding-top: 10px;block-size:35px;
+  
+}
+.img2{
+  padding-top: 10px;block-size:35px;
+}
+.img3{
+  padding-top: 12px; padding-left: 50px;block-size:35px;
+}
+.img4{
+  padding-top:10px;
+  margin-left:10px;
+  block-size:35px;
+  // margin-top: 12px;
+}

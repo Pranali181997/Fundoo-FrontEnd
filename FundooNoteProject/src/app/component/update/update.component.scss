@@ -1,0 +1,48 @@
+.noteDisplaySetting
+{
+    display: flex;
+    flex-direction: row;
+    //border: 1px solid green;
+    //width:600px;
+    margin-left: 8px;
+
+     height: 150px;
+     width: 450px;
+   
+}
+.titledescSetting
+{
+    margin-left: 80px;
+    height: 80px;
+    border: 0px;
+    font-size: x-large;
+}
+
+.descriptionSetting
+{
+    margin-top: 10px;
+    height: 80px;
+    border: 0px;
+    margin-left: 10px;
+    font-size: large;
+}
+.closeButton
+{
+    margin-left: 140px;
+    border: 0px;
+    height: 30px;
+    margin-top: 24px;
+    background-color: transparent;
+}
+input {border:0;outline:0;}
+input:focus {outline:none!important;}
+
+.tit{
+    font-size: larger;height: 20px;width: 100%;background-color: transparent;border: none;
+}
+.des{
+    font-size: medium;margin-top: 10px;height: 20px;width: 100%;background-color: transparent;
+}
+.icn{
+    margin-top: 30px;
+}

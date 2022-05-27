@@ -1,0 +1,27 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="note" >
+        <div *ngIf="isShow" fxLayout="row">
+            <input class="title" style="width:99%;" placeholder="Title" [(ngModel)]="title" >
+            <img src="../../../assets/push_pin_black_24dp.svg" alt="pin">
+
+        </div>
+        <div>
+        <div  *ngIf="!isShow || isShow" (click)="show()" fxLayout="row">
+            <input class="takenote" style="width: 99%;" placeholder="Take a note ..." [(ngModel)]="description">
+            <span class="threeicons" fxLayout="row" *ngIf="!isShow"  fxHide.xs="true" fxHide.sm="true">
+                <img class="img1"
+                    src="../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                <img class="img2" 
+                    src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                <img class="img3" 
+                    src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">              
+            </span>
+        </div>
+        <div class="flex" *ngIf="isShow" >
+            <div class="noteDisplaySetting"  fxLayout="row">
+                <app-icons class="allicons"></app-icons>
+                <button class="close" (click)="close()" >Close</button>
+            </div>
+        </div>
+    </div>
+</div>

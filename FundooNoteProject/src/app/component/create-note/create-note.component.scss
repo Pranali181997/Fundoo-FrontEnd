@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    cursor: pointer;
+}
+
+.note {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 3px rgba(157, 167, 170, 0.215);
+   border: 2px solid rgb(227, 222, 222); 
+   width:40%;  
+   cursor: pointer;
+}
+.title {
+    height: 30px;
+    font-weight: 200px;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: rgb(252, 249, 249);
+    cursor: pointer;
+}
+
+.takenote {
+    height: 30px;
+    font-size: 14px;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    width: 150px;
+    background-color: rgb(252, 249, 249);
+    display: flex;
+
+}
+
+.close {
+    margin-left: 180px;
+    border: 0;
+    outline: 0;
+    background:transparent;
+    cursor: pointer;
+    font-weight: 200px;
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.flex {
+    display: flex;
+    padding-left: -10px;
+    padding-top: 12px;
+    margin-right: 50px;
+    
+}
+.flexx {
+    display: flex;
+    cursor: pointer;
+    padding-top: 20px;
+    margin-right: 50px;
+}
+
+button {
+    border: 0;
+    outline: 0;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+::placeholder {
+    //opacity: 10;
+    color: black
+}
+
+.border {
+    margin: auto;
+}
+
+.threeicons{
+    float:right;
+     margin-bottom: 1px;
+}
+.img1{
+    height: 20px;
+    width: 20px; 
+    padding-top: 8px;
+}
+.img2{
+    height: 20px;
+    width: 20px;
+     padding-top: 8px; 
+    padding-left: 8px;
+}
+.img3{
+   height: 20px;
+   width: 20px;
+    padding-top: 8px; 
+   padding-left: 8px;
+}
+

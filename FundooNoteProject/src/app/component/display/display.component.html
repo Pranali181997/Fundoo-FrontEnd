@@ -1,0 +1,17 @@
+<div fxLayout="row wrap">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="noteDisplaySetting"
+        *ngFor="let note of recievedNoteList | filter:searchTitle">
+        <div class="clr" [style.background]="note.bgColor" >
+            <div class="notes">
+                <p (click)="openDialog(note)"> {{note.title}}
+                </p>
+                <p (click)="openDialog(note)"> {{note.description}}</p>
+
+            </div>
+            <div class="flex">
+                <app-icons (updateEvent)="archiveMessage($event)" [notedata]="note" (trashEvent)="trashMessage($event)"> </app-icons>
+            </div>
+        </div>
+
+    </div>
+</div>
