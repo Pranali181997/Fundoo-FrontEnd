@@ -7,6 +7,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-color:transparent;
   
   }
   .example-is-mobile .example-toolbar {
@@ -16,7 +17,6 @@
   } 
   .example-toolbar
   {
-    //border: 1px solid red;
     background-color:transparent;
     height: 60px;
     box-sizing: border-box;
@@ -39,19 +39,9 @@
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
-  // .div_wrraper{
-  //   width: 720px;
-  //   margin-left: 108px;
-
-  // }
-//   .from_wrraper{
-//     background: #f1f3f4;
-//     border: 1px solid transparent;
-//     -webkit-border-radius: 8px;
-//     border-radius: 8px;
-// }
 .wholesearchbox
 {
+  border-radius: 5px;
   border: 1px solid transparent;
   display: flex;
   flex-direction: row;
@@ -82,12 +72,7 @@ input:focus {
 {
   padding-left: 30px;padding-top: 10px;
 }
-// .toolButtonSetting
-// {
-//   margin-left: 20px;display: flex;
-//   flex-direction: row;
-//   align-items: center;
-// }
+
 .button
 {
   border: 0px;background-color: transparent;padding: 20px;
@@ -135,5 +120,5 @@ a:hover {
   padding-top:10px;
   margin-left:10px;
   block-size:35px;
-  // margin-top: 12px;
+
 }

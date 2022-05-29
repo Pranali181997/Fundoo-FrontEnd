@@ -8,9 +8,6 @@ export class GridListDataService {
   private info = new Subject<any>();
   public store = this.info.asObservable();
 
-   private infoforPipe = new Subject<any>();
-   public storeForpipe = this.infoforPipe.asObservable();
-
 
   constructor() { }
   nextDataUpdate(text:any){
@@ -19,7 +16,7 @@ export class GridListDataService {
 
    dataPipe(text:any)
    {
-     this.infoforPipe.next(text);
+     this.info.next(text);
    }
 }
 

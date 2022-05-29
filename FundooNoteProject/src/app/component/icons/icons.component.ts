@@ -32,9 +32,6 @@ export class IconsComponent implements OnInit {
   colorArray = [{ Colorcode: "cadetblue", name: "cadetblue" }, { Colorcode: "#f28b82", name: "Red" }, { Colorcode: "#fbbc04", name: "Orange" }, { Colorcode: "#fff475", name: "Yellow" }, { Colorcode: "#ccff90", name: "Green" }, { Colorcode: "teal", name: "Teal" },
   { Colorcode: "#cbf0f8", name: "Blue" }, { Colorcode: "aqua", name: "aqua" }, { Colorcode: "#d7aefb", name: "Purple" }, { Colorcode: "#fdcfe8", name: "Pink" }, { Colorcode: "#e6c9a8", name: "Brown" }, { Colorcode: "#e8eaed", name: "Gray" }];
 
-
-  
-
   constructor(private note: NoteService, private _snackBar: MatSnackBar, public dialog: MatDialog, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -53,8 +50,8 @@ export class IconsComponent implements OnInit {
  
     }
   }
-  archieve(note: any) {
-    this.isArchive = false;
+  archieve() {
+    // this.isArchive = false;
     this.note.archiveNoteService(this.notedata.noteId).subscribe((response: any) => {
       console.log(response);
       this.updateEvent.emit(response)
@@ -73,7 +70,7 @@ export class IconsComponent implements OnInit {
     })
   }
 
-  trash(note: any) {
+  trash() {
     // this.isTrash = !note.isTrash;
     this.note.trashNote(this.notedata.noteId, this.data).subscribe((response: any) => {
       console.log(response);
@@ -88,7 +85,7 @@ export class IconsComponent implements OnInit {
     })
     )
   }
-  restore(note: any) {
+  restore() {
     // this.isTrash = !note.isTrash;
     this.note.trashNote(this.notedata.noteId, this.data).subscribe((response: any) => {
       console.log(response);

@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="space-between center">
-    <div class="borderStyle" fxLayout.xs="column" fxFlex.xs=50>
-        <div style=" width: 90%;" fxLayout="column" fxLayoutAlign="space-between left">
+    <div class="borderStyle" fxLayout.xs="column">
+        <div style=" width: 80%;" fxLayout="column" fxLayoutAlign="space-between left">
             <form [formGroup]="registerForm " (ngSubmit)="onSubmit()">
                 <h1>
                     <span style="color: blue;">F</span>
@@ -57,13 +57,7 @@
                                 formControlName="confirmPassword">
                             <mat-error>Password not match</mat-error>
                         </mat-form-field>
-                        <!-- <div fxLayout="column" fxLayoutAlign="stretch">
-                        <mat-form-field class="widthforBox" appearance="outline">
-                            <mat-label>adress</mat-label>
-                            <input matInput type="adress" placeholder="adress"
-                                formControlName="adress">    
-                        </mat-form-field>
-                    </div> -->
+                    
                     </div>
                     <mat-hint style="font-size: small;padding-left: 14px;">Use 8 or more characters with a mix of
                         letters,
@@ -81,11 +75,11 @@
         </div>
 
         <div class="account" fxHide.xs="true" fxHide.sm="true">
-        <!-- <div class="account"> -->
-            <img style="margin-left: -46px;" src="../../../assets/account.svg">
-            <mat-hint style="margin-left: -46px;">One account. All of Fundoo</mat-hint>
-            <mat-hint style="margin-left: -46px;"> Working for you</mat-hint>
-            <!-- <mat-hint style="font-size: medium; color: black;">One account. All of Google working for you.</mat-hint> -->
+    
+            <img class="imag"  src="../../../assets/account.svg">
+            <mat-hint class="images" >One account. All of Fundoo</mat-hint>
+            <mat-hint class="images"  > Working for you</mat-hint>
+          
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
-<div fxLayout="row wrap">
-    <div fxLayout="column" fxLayoutAlign="space-around center" class="noteDisplaySetting"
-        *ngFor="let note of recievedNoteList | filter:searchTitle">
+<div fxLayout="row wrap" >
+    <div [class.gridToList]="gridList" fxLayout="column" fxLayoutAlign="space-around center" class="noteDisplaySetting"
+        *ngFor="let note of recievedNoteList | filter:searchTitle" >
         <div class="clr" [style.background]="note.bgColor" >
             <div class="notes">
                 <p (click)="openDialog(note)"> {{note.title}}

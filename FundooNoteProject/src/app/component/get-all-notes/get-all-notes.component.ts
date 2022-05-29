@@ -27,7 +27,6 @@ export class GetAllNotesComponent implements OnInit {
   recieveMessage(event: any) {
     this.GetAllNotes();
   }
-
   archiveMessage(event: any) {
     this.GetAllNotes();
   }

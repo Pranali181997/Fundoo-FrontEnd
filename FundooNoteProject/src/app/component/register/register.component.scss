@@ -13,10 +13,11 @@
   align-content: center;
 }
 .borderStyle{
+  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   border: 1px solid gray;
-  width: 70%;
+  width: 60%;
   margin-top: 30px;
   margin-left:100px ;
   //margin: 30px 100px 25px;
@@ -25,7 +26,7 @@
   align-items: center;
   padding-left: 30px;
   padding-top: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   height: 90%;
   border-radius: 10px;
 }
@@ -108,6 +109,11 @@
     {
       width: 100%;
     }
-    // .adress{
-    //   width: 100px;
-    // }
+    .images{
+     margin-left: -46px;
+    }
+    .imag{
+      margin-left: -46px;
+    width: 70%;
+    height: auto;
+     }

@@ -11,8 +11,6 @@ import { NoteService } from 'src/app/Services/note/note.service';
 })
 export class UpdateComponent implements OnInit {
   updateMessage="note refresh";
-  
-
   constructor(private _snackBar: MatSnackBar,public note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
   title: any
@@ -29,7 +27,7 @@ export class UpdateComponent implements OnInit {
     {
       "title": this.title,
       "description": this.description,
-      "bgColor": "",
+      "bgColor": "yellow",
       "isArchive": false,
       "isReminder": false,
       "isPin": false,
@@ -56,7 +54,7 @@ export class UpdateComponent implements OnInit {
   receiveMessage($event:any){
     this.onNoClick()
   }
- archiveMessage(event:any){
+  archiveMessage(event:any){
     this.data.bgColor=event;
   }
 }

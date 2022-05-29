@@ -1,8 +1,8 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" fxLayout="column">
   <mat-toolbar class="example-toolbar">
     <div fxLayout="row" ngClass.xs="menu-xs" fxLayout.xs="row" fxLayout.xs="10">
-      <button class="butt" mat-icon-button (click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
+      <button style="background-color:transparent;" class="butt" mat-icon-button (click)="snav.toggle()">
+        <mat-icon >menu</mat-icon>
       </button>
     </div>
     <div>
@@ -22,8 +22,11 @@
     <div class="nav">
       <button class="but1"><img class="img1" src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
-    <div>
-      <button class="but2"><img class="img1" src="../../../assets/view_agenda_FILL0_wght400_GRAD0_opsz48.svg"></button>
+    <div *ngIf="!grid" >
+      <button (click)="formatListView();FormatView()"  class="but2"><img class="img1" src="../../../assets/view_agenda_FILL0_wght400_GRAD0_opsz48.svg"></button>
+    </div>
+    <div *ngIf="grid" >
+      <button (click)="formatGridView();FormatView()"   class="but2"><img class="img1" src="../../../assets/grid_view_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
     <div>
       <button class="but3" class="button"><img class="img2"
@@ -60,7 +63,7 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content style="background-color:white;">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

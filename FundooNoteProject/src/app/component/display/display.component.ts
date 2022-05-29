@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UpdateComponent } from '../update/update.component';
 import { DataService } from 'src/app/Services/data/data.service';
+import { GridListDataService } from 'src/app/Services/gridListData/grid-list-data.service';
 
 @Component({
   selector: 'app-display',
@@ -17,16 +18,20 @@ export class DisplayComponent implements OnInit {
 
   @Output() trashEvent = new EventEmitter<any>();
   displayMessage = "note refresh"
-  filteredString: string = '';
+ 
   searchTitle: any;
-  constructor(public dialog: MatDialog, private dataService: DataService) {
+  gridList: any;
+  constructor(public dialog: MatDialog, private dataService: DataService,private nextData:GridListDataService) {
     
   }
   ngOnInit(): void {
+   
+this.nextData.store.subscribe(a=>this.gridList=a)
     this.dataService.currentMessage.subscribe(message => {
       console.log(message)
       this.searchTitle = message
     })
+    
   }
   openDialog(note: any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
