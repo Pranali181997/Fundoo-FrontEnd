@@ -12,11 +12,11 @@ import { GridListDataService } from 'src/app/Services/gridListData/grid-list-dat
 export class DisplayComponent implements OnInit {
   note: any
 
-  @Input() recievedNoteList: any;
+  @Output() DisplayEvent = new EventEmitter<string>();
+  @Input()recievedNoteList:any;
+  @Output() displayEvent = new EventEmitter<string>();
 
-  @Output() archiveEvent = new EventEmitter<any>();
-
-  @Output() trashEvent = new EventEmitter<any>();
+  
   displayMessage = "note refresh"
  
   searchTitle: any;
@@ -26,7 +26,7 @@ export class DisplayComponent implements OnInit {
   }
   ngOnInit(): void {
    
-this.nextData.store.subscribe(a=>this.gridList=a)
+ this.nextData.store.subscribe(a=>this.gridList=a)
     this.dataService.currentMessage.subscribe(message => {
       console.log(message)
       this.searchTitle = message
@@ -43,21 +43,12 @@ this.nextData.store.subscribe(a=>this.gridList=a)
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
-      this.archiveEvent.emit("Hello")
+      this.displayEvent.emit("Hello")
 
     });
   }
-  receivedMessage(event: any) {
-    console.log(event);
-    this.archiveEvent.emit(this.displayMessage)
-  }
-  archiveMessage(event: any) {
-    // console.log(event);
-    this.archiveEvent.emit("hello")
-  }
-  trashMessage(event:any)
-  { 
-    this.trashEvent.emit("hello")     
-  }
 
+  updateMessage(event:any){
+    this.displayEvent.emit("Hello")
+ }
 }

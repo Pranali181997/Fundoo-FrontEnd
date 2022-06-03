@@ -1,7 +1,8 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" fxLayout="column">
+<!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" fxLayout="column"> -->
+<div class="example-container" fxLayout="column">
   <mat-toolbar class="example-toolbar">
     <div fxLayout="row" ngClass.xs="menu-xs" fxLayout.xs="row" fxLayout.xs="10">
-      <button style="background-color:transparent;" class="butt" mat-icon-button (click)="snav.toggle()">
+      <button  class="butt" mat-icon-button (click)="snav.toggle()">
         <mat-icon >menu</mat-icon>
       </button>
     </div>
@@ -16,9 +17,9 @@
 
 
       <input class="inputSearchbox" type="text" placeholder="Search" (keyup)="keyFun($event)">
-      <p>{{text}}</p>
+      <!-- <p>{{text}}</p> -->
     </div>
-    <!-- </div> -->
+  
     <div class="nav">
       <button class="but1"><img class="img1" src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>

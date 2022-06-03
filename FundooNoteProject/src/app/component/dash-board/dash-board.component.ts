@@ -73,7 +73,7 @@ SearchProp(el: HTMLElement, color: string) {
   formatListView() {
     this.grid = true
     this.nextData.nextDataUpdate(this.FormatView().valueOf())
-    console.log("value ", this.FormatView())
+    console.log("value= ", this.FormatView().valueOf())
   }
   formatGridView() {
     this.grid = false

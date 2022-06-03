@@ -5,7 +5,7 @@
     <input type="text" placeholder="description" class="des" [(ngModel)]="description">
 
     <div style="display: flex;">
-      <app-icons class="icn" [notedata]="data" (archiveEvent)="archiveMessage($event)"></app-icons>
+      <app-icons class="icn" [notedata]="data" (updateEvent)="autoref($event)"></app-icons>
       <button (click)="onNoClick()" class="closeButton">update</button>
     </div>
 

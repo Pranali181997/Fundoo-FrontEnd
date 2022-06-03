@@ -1,46 +1,30 @@
-.borderStylelogin
-{
-  border: 1px solid #dadcdf;
-  width: 500px;  
-  margin-left: 80px;
-  margin-top: 50px; 
-  padding-top: 40px;
-    padding-bottom: 80px;
-    padding-left: 20px;
-    align-content: center; 
-    justify-content: center;
-    display: flex;
-    flex-flow: column wrap;
-    border-radius: 8px;
+.outer{
+  padding-left: 40px;
+  padding-right: 40px;
+  border:2px solid rgb(209, 207, 207);
+  height:70vh;
+  border-radius:10px
 }
 .designEmail
 {
-  width: 80%;
-  padding-right: 40px;
-  padding-left: 30px;
-}
-.Spaces .mat-form-field + .mat-form-field{
-  margin-left: 10px;
   width: 100%;
-  margin-top: 30px;
 }
+
 .Spacesforbutton 
 {
-  display: flex;
-  gap: 20px 220px;
-  width: 490px;
-  color: blue;
-  margin-top: 70px;
+  // width: 80%;
+  margin-top: 30px;
   font-size: medium;
-  //justify-content: space-between;
+
 }
 .buttonStyleforCreate
 {
-  padding-left: 30px;
+  // padding-left: 30px;
   border: 0px;
   color: blue;
   font-size: medium;
   background-color: transparent;
+   
 }
 .buttonStyleforNext
 {
@@ -49,23 +33,26 @@
   background-color: blue;
   height: 40px;width: 100px;
   border-radius: 6px;
-    
+   margin-left:50px ;
+
 }
 .buttonStyleForForgot
 {
   border: 0px;
+  
   color: blue;
   font-size: small;
   background-color: transparent;
-  padding-left: 30px;
+ 
 }
-.buttn{
- font-size: medium; color: black; padding-left: 60px;
+.note{
+  color: blue;
+  // padding: 10px;
 }
 .learn{
   color: blue;
-  padding-left: 30px;
+  align-items: center;
 }
-.mat{
-  color: gray; margin-top: 30px;padding-left: 30px;
+.label{
+  width:100%
 }

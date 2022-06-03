@@ -1,7 +1,7 @@
 <div fxLayout="row wrap" >
     <div [class.gridToList]="gridList" fxLayout="column" fxLayoutAlign="space-around center" class="noteDisplaySetting"
-        *ngFor="let note of recievedNoteList | filter:searchTitle" >
-        <div class="clr" [style.background]="note.bgColor" >
+        *ngFor="let note of recievedNoteList | filter:searchTitle" [style.background]="note.bgColor" >
+        <div class="clr" >
             <div class="notes">
                 <p (click)="openDialog(note)"> {{note.title}}
                 </p>
@@ -9,7 +9,7 @@
 
             </div>
             <div class="flex">
-                <app-icons (updateEvent)="archiveMessage($event)" [notedata]="note" (trashEvent)="trashMessage($event)"> </app-icons>
+                <app-icons  [notedata]="note" (updateEvent)="updateMessage($event)"> </app-icons>
             </div>
         </div>
 

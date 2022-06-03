@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ForgetPasswordComponent } from './forget-password.component';
 
@@ -8,7 +10,8 @@ describe('ForgetPasswordComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForgetPasswordComponent ]
+      declarations: [ ForgetPasswordComponent ],
+      imports:[ReactiveFormsModule,HttpClientModule]
     })
     .compileComponents();
   });
@@ -21,5 +24,14 @@ describe('ForgetPasswordComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('this method is use for forget password component', () => {
+    expect(component).toBeTruthy();
+  });
+  it('should crate onsubmit', () => {
+    expect(component.onSubmit).toBeTruthy();
+  });
+  it('should have lifecycle', () => {
+    expect(component.ngOnInit).toBeTruthy();
   });
 });

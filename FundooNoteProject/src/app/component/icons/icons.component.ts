@@ -104,7 +104,6 @@ export class IconsComponent implements OnInit {
     this.note.deleteNote(this.notedata.noteId).subscribe((response: any) => {
       console.log("Note Deleted Successfully", response);
       this.updateEvent.emit(response);
-
       this._snackBar.open('Note Deleted Successfully', '', {
         duration: 3000,
         verticalPosition: 'bottom'
@@ -115,7 +114,9 @@ export class IconsComponent implements OnInit {
     console.log(color, this.notedata);
     this.note.changeColor(this.notedata.noteId, color).subscribe((response: any) => {
       console.log(response);
-      this.archiveEvent.emit(color)
+      this.updateEvent.emit(color)
+
+
       this._snackBar.open('Color changed successfully..', '', {
         duration: 3000,
         verticalPosition: 'bottom'
@@ -125,6 +126,9 @@ export class IconsComponent implements OnInit {
       verticalPosition: 'bottom'
     })
     )
+  }
+  collabs(){
+    console.log("helo")
   }
 }
 

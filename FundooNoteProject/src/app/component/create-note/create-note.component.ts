@@ -29,7 +29,7 @@ export class CreateNoteComponent implements OnInit {
     let data = {
       "title": this.title,
       "description": this.description,
-      "bgColor": "red",
+      "bgColor": "white",
       "isArchive": false,
       "isReminder": false,
       "isPin": false,

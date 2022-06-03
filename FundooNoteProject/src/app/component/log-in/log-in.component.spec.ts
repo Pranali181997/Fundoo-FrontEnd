@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { LogInComponent } from './log-in.component';
 
@@ -8,7 +12,8 @@ describe('LogInComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogInComponent ]
+      declarations: [ LogInComponent ],
+      imports:[ReactiveFormsModule,HttpClientModule,AppRoutingModule,MatSnackBarModule]
     })
     .compileComponents();
   });
@@ -19,7 +24,10 @@ describe('LogInComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('OnSubmit For Login', () => {
+    expect(component.onSubmit).toBeTruthy();
+  });
+  it(' should have LifeCycle ', () => {
+    expect(component.ngOnInit).toBeTruthy();
   });
 });

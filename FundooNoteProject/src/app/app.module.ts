@@ -35,6 +35,8 @@ import{ MatTooltipModule} from '@angular/material/tooltip';
 import {Routes, RouterModule } from '@angular/router'; 
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FilterPipe } from './pipe/filter.pipe';
+import { MatDialogRef } from '@angular/material/dialog';
+import { FormBuilder } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -52,8 +54,6 @@ import { FilterPipe } from './pipe/filter.pipe';
     TrashComponent,
     UpdateComponent,
     FilterPipe,
- 
-  
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { matSnackBarAnimations, MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { CreateNoteComponent } from './create-note.component';
 
@@ -8,7 +10,8 @@ describe('CreateNoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateNoteComponent ]
+      declarations: [ CreateNoteComponent ],
+      imports:[HttpClientModule,MatSnackBarModule]
     })
     .compileComponents();
   });
@@ -19,7 +22,13 @@ describe('CreateNoteComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Show method', () => {
+    expect(component.show).toBeTruthy();
+  });
+  it('close method', () => {
+    expect(component.close).toBeTruthy();
+  });
+  it('Show method', () => {
+    expect(component.ngOnInit).toBeTruthy();
   });
 });

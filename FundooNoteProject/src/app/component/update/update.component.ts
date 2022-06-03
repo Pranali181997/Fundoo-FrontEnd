@@ -11,15 +11,17 @@ import { NoteService } from 'src/app/Services/note/note.service';
 })
 export class UpdateComponent implements OnInit {
   updateMessage="note refresh";
+  bgColor: any;
   constructor(private _snackBar: MatSnackBar,public note: NoteService, public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
   title: any
   description: any
-  BGColor:any
+  
 
   ngOnInit(): void {
     this.title = this.data.title;
     this.description = this.data.description;
+    this.bgColor=this.data.bgColor;
     console.log(this.data)
   }
   onNoClick(): void {
@@ -27,7 +29,7 @@ export class UpdateComponent implements OnInit {
     {
       "title": this.title,
       "description": this.description,
-      "bgColor": "yellow",
+      "bgColor": this.data.bgColor,
       "isArchive": false,
       "isReminder": false,
       "isPin": false,
@@ -54,7 +56,8 @@ export class UpdateComponent implements OnInit {
   receiveMessage($event:any){
     this.onNoClick()
   }
-  archiveMessage(event:any){
+
+  autoref(event:any){
     this.data.bgColor=event;
-  }
+}
 }

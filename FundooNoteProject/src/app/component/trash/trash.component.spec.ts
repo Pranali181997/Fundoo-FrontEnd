@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TrashComponent } from './trash.component';
@@ -8,7 +9,8 @@ describe('TrashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrashComponent ]
+      declarations: [ TrashComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   });
@@ -19,7 +21,13 @@ describe('TrashComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('LifeCycle', () => {
+    expect(component.ngOnInit).toBeTruthy();
+  });
+  it('Get all notes', () => {
+    expect(component.GetAllNotes).toBeTruthy();
+  });
+  it('Display message', () => {
+    expect(component.archiveMessage).toBeTruthy();
   });
 });

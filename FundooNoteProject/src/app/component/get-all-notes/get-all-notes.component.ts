@@ -27,11 +27,11 @@ export class GetAllNotesComponent implements OnInit {
   recieveMessage(event: any) {
     this.GetAllNotes();
   }
-  archiveMessage(event: any) {
+  displayMessage(event:any){
     this.GetAllNotes();
   }
-  trashMessage(event: any) {
-    this.GetAllNotes();
-  }
+  // trashMessage(event: any) {
+  //   this.GetAllNotes();
+  // }
   
 }

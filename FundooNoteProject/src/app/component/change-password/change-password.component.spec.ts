@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormBuilder} from '@angular/forms';
 import { ChangePasswordComponent } from './change-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 describe('ChangePasswordComponent', () => {
   let component: ChangePasswordComponent;
@@ -8,7 +13,8 @@ describe('ChangePasswordComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChangePasswordComponent ]
+      declarations: [ ChangePasswordComponent ],
+      imports:[ReactiveFormsModule,HttpClientModule,AppRoutingModule,MatSnackBarModule]
     })
     .compileComponents();
   });
@@ -21,5 +27,8 @@ describe('ChangePasswordComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('OnSubmit ResetPassword', () => {
+    expect(component.onSubmit).toBeTruthy();
   });
 });

@@ -3,11 +3,12 @@
             <div  class="icons"  mat-icon-button matTooltip="Remind me"> <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" width="20px"
                     height="20px"></div>
 
-            <div  class="icons"  mat-icon-button matTooltip="Collaborator"> <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"
+            <div class="icons" (click)="collabs()" mat-icon-button matTooltip="Collaborator"> <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"
                     width="20px" height="20px"></div>
                     
                     <div class="imageSetting">
-                        <div class="icons" mat-button [matMenuTriggerFor]="background_color" style="border: 0px;background-color:transparent" matTooltip="bgcolor"><img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg"></div>
+                        <div class="icons" mat-button [matMenuTriggerFor]="background_color" matTooltip="bgcolor"><img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" width="20px"
+                            height="20px"></div>
                         <mat-menu #background_color="matMenu" >
                             <div class="icn">
                                 <div *ngFor="let color of colorArray" class="pallete">
@@ -15,7 +16,7 @@
                                 </div>
                             </div>                         
                         </mat-menu>
-                    </div>
+                    </div> 
  
             <div  class="icons"  mat-icon-button matTooltip="add image"> <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image" width="20px"
                     height="20px"></div>
