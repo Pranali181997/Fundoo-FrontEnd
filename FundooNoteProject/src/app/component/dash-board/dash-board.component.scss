@@ -33,7 +33,17 @@
     flex: 1;
     
   }
-  
+  .div_wrraper{
+    width: 720px;
+    margin-left: 108px;
+
+  }
+  .from_wrraper{
+    background: #f1f3f4;
+    border: 1px solid transparent;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
   .example-is-mobile .example-sidenav-container {
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
@@ -77,10 +87,10 @@ input:focus {
 {
   border: 0px;background-color: transparent;padding: 20px;
 }
-.nav{
-  margin-left: 300px;
+// .nav{
+//   // margin-left: 300px;
   
-}
+// }
 .icon{
   block-size: 30px;
   padding-right: 20px;
@@ -115,11 +125,49 @@ a:hover {
   padding-top: 10px;block-size:35px;
 }
 .img3{
-  padding-top: 12px; padding-left: 50px;block-size:35px;
+  padding-top: 12px;
+   padding-left: 30px;
+   block-size:35px;
 }
 .img4{
   padding-top:10px;
-  margin-left:10px;
+  // margin-left:10px;
   block-size:35px;
 
+}
+.hi{
+  width: 120%;
+
+}
+.menu-xs{
+  margin-left: -15px;
+}
+.div_wrraper-xs{
+  width: 100px;
+  margin-left: 20px;
+}
+.div_wrraper-md{
+  width: 400px;
+  margin-left: 20px;
+}
+
+.div_wrraper-sm{
+  width: 200px;
+  margin-left: 10px;
+}
+.list-sm{
+  margin-left: 20px;
+ 
+}
+.list-xs{
+  margin-left: 5px;
+}
+.toolbar_image_xs{
+  margin-left: 2px;
+}
+.toolbar_image_sm{
+  margin-left: 2px;
+}
+.xsclass{
+  width: 100%;
 }

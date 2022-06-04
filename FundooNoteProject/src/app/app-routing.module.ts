@@ -14,8 +14,10 @@ import { AuthenticationGuard } from './guard/authentication.guard';
 
 const routes: Routes = [
   {path: `register`,component:RegisterComponent},
+  
   {path:'',redirectTo:`/log-in`,pathMatch:'full'},
   {path:`log-in`,component:LogInComponent},
+ 
   {path:`forgetpassword`,component:ForgetPasswordComponent},
   {path:`ChangePassword/:token`,component:ChangePasswordComponent},
   {path:`dashBoard`,component:DashBoardComponent,canActivate:[AuthenticationGuard],

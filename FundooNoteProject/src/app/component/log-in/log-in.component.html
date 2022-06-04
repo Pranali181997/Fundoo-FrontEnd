@@ -1,12 +1,13 @@
-<div fxLayout="column" fxLayoutAlign="center center" style="height:100vh">
-    <div class="outer" fxFlex.xm=90  fxFlex.sm=90 fxFlex=80 fxLayout="column" fxLayoutAlign="center center">
+
+<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 100px;">
+    <div class="outer" fxLayout="column" fxLayoutAlign="center center" ngClass.xs="class" ngClass.sm="class1">
 
         <form [formGroup]="LoginForm " (ngSubmit)="onSubmit()">
             <div fxLayout="column" fxLayoutAlign="center center">
                 <h1>
                     <span style="color: blue;">F</span>
                     <span style="color: red;">u</span>
-                    <span style="color: orange;">n</span>
+                    <span style="color: orange;">n</span>   
                     <span style="color: blue;">d</span>
                     <span style="color: green;">o</span>
                     <span style="color: red;">o</span>
@@ -37,14 +38,14 @@
                 <div class="note">
                     <p>Not your computer? Use Guest mode to sign in privately.</p>
                 </div>
-                <div class="learn" fxLayout="column" fxLayoutAlign="center center">
+                <div class="learn" fxLayout="row" fxLayoutAlign="start center">
                     <p>Learn more</p>
                 </div>
-                <div class="Spacesforbutton" fxLayout="row"  >
-                    <button fxLayoutAlign="start center" class="buttonStyleforCreate" routerLink="/register">Create account</button>
+                <div class="Spacesforbutton" fxLayout="row" fxLayoutAlign="space-between center">
+                    <button  fxLayout="row" fxLayoutAlign="start center" class="buttonStyleforCreate" routerLink="/register">Create account</button>
                        
-                        <button class="buttonStyleforNext" fxLayoutAlign="center center">Next</button>
-                    
+                    <button class="buttonStyleforNext" fxLayoutAlign="center center">Next</button>
+
                 </div>
             </div>
         </form>

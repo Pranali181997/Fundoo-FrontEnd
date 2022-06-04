@@ -1,8 +1,11 @@
 .outer{
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+ 
   border:2px solid rgb(209, 207, 207);
-  height:70vh;
+//   height:70vh;
   border-radius:10px
 }
 .designEmail
@@ -33,7 +36,7 @@
   background-color: blue;
   height: 40px;width: 100px;
   border-radius: 6px;
-   margin-left:50px ;
+   margin-left:20px ;
 
 }
 .buttonStyleForForgot
@@ -55,4 +58,14 @@
 }
 .label{
   width:100%
+}
+.class{
+  width: 80%;
+}
+.class1{
+  width:50%;
+  margin-top: 10px;
+  padding: 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

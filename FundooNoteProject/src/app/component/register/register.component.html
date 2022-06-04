@@ -1,6 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="space-between center" style="height: 100vh;">
-    <div class="borderStyle" fxLayout.xs="column" fxLayout=90>
-        <div style=" width: 80%;" fxLayout="column" fxLayoutAlign="space-between left">
+<div fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="borderStyle" fxLayout.xs="column" ngClass.xs="xssize"  ngClass.sm="xssize1">
+        <div  fxLayout="column">
             <form [formGroup]="registerForm " (ngSubmit)="onSubmit()">
                 <h1>
                     <span style="color: blue;">F</span>
@@ -11,11 +11,10 @@
                     <span style="color: red;">o</span>
                 </h1>
                 <div>
-                    <p class="buttonStyle">Create your Fundoo
+                    <p class="buttonStyle1">Create your Fundoo
                         Account</p>
                 </div>
-                <!-- <div class="Spaces" fxClass-xs="column" ngClass.xs="fxClass-xs"> -->
-                <div class="Spaces" fxClass-xs="column" ngClass.xs="fxClass-s">
+                <div class="Spaces" fxClass-xs="column" >
                     <div fxLayout.xs="column">
                         <mat-form-field appearance="outline">
                             <mat-label>First name</mat-label>
@@ -44,8 +43,8 @@
                         instead
                     </button>
                 </div>
-                <div fxClass-xs="column" ngClass.xs="fxClass-xs">
-                    <div class="Spaces" fxClass-xs="column">
+                <div fxClass-xs="column" ngClass.xs="fxClass-xs" >
+                    <div fxLayout="row" class="Spaces" fxLayout.xs="column">
                         <mat-form-field appearance="outline" fxLayout.xs="column">
                             <mat-label>Password</mat-label>
                             <input matInput placeholder="Password" formControlName="password">
@@ -65,20 +64,22 @@
                         <input type="checkbox" >Show password
                         <!-- <mat-checkbox type="checkbox" style="margin-top: 20px;" (click)="passChange();">Show password</mat-checkbox> -->
                     </div>
-                    <div class="Spacesforbutton" fxLayout.xs="column">
-                        <button class="buttonStyle" routerLink="/log-in">Sign in instead</button>
-                        <button mat-button class="buttonStyleforNext">Next</button>
+                    <div class="Spacesforbutton" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button fxLayout="row" fxLayoutAlign="start center" class="buttonStyle" routerLink="/log-in">Sign in instead</button>
+
+                        <button mat-button class="buttonStyleforNext" >Next</button>
+                      
                     </div>
                 </div>
             </form>
         </div>
-
-        <div class="account" fxHide.xs="true" fxHide.sm="true">
     
-            <img class="imag"  src="../../../assets/account.svg">
-            <mat-hint class="images" >One account. All of Fundoo</mat-hint>
-            <mat-hint class="images"  > Working for you</mat-hint>
-          
+        <div fxLayout="column" fxLayoutAlign="center center"  class="account" fxHide.xs="true" fxHide.sm="true" >
+    
+            <img   src="../../../assets/account.svg">
+            <mat-hint  >One account. All of Fundoo</mat-hint>
+            <mat-hint  > Working for you</mat-hint>
         </div>
+    
     </div>
 </div>

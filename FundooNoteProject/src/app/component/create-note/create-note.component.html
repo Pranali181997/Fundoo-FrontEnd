@@ -19,9 +19,12 @@
             </span>
         </div>
         <div class="flex" *ngIf="isShow" >
-            <div class="noteDisplaySetting"  fxLayout="row">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
                 <app-icons class="allicons"></app-icons>
-                <button class="close" (click)="close()" >Close</button>
+                <div fxLayout="row" fxLayoutAlign="end center" >
+                    <button class="close" (click)="close()" >Close</button>
+                </div>
+               
             </div>
         </div>
     </div>
